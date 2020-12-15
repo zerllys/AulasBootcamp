@@ -1,0 +1,56 @@
+
+comandos no terminal
+cd - navegaçao entre as pastas (cd /  raiz) (cd .. volta)
+ls - lista de diretorios 
+mkdir - cria pasta
+rm-rf - remove o diretorio e tudo q tem dentro
+clear ou ctrl+l - limpa terminal
+tab - autocompleta
+
+Sha1 - encriptaçao de caracteries de 40 digitos,usado para identificar os representar arquivos de forma curta e segura
+--stdin -retorna o valor sha1 de um arquivo
+
+objetos internos do Git
+blobs - contem metadados do git tipo do objeto,tamanho da string, tamanho do arquivo e o sha1
+trees - armazenam e apontam para os blobs,onde estao localizados os arquivos e os nomes, tambem apontam para outras arvores
+commits - objeto que aponta para a arvore,parente,autor, mensagem e tempo é unico para cada autor
+
+sistema distribuido é seguro pq se tiver alguma alteraçao ele mostra a versao modificada o q foi modificado e por quem e mais de um pc tera uma copia em caso de perda
+
+git init - inicializa o diretorio criando um repositorio
+git add* adiciona todas as mudanças
+git add (nome do arquivo)
+git commit
+-a arquivos ocultos
+git config --list mostra a lista dos autores
+git config --global --unset user.email   ou user.nickname não aparece o autor(reset)
+
+***conflitos***
+antes de subir a versao precisa puchar a q esta no git  ver se tem alteração e depois sim subir a sua versao.
+merge serve para mostrar onde esta a alteraçao e o vc escolher qual versao deve ser considerada.
+
+git status
+git add*
+git status
+git commit -m""
+git push (empurrar a sua versao)
+(a falha ira aparecer se as versoes estiverem diferentes)
+git pull (puxar a versao q esta no git)
+abra os arquivos de conflito 
+<<<< sua alteração 
+====versao do git
+escolha a versao q melhor te atende 
+git status
+git add*
+git status
+git commit -m""
+git push
+
+git clone+endereço url
+
+
+
+markedown.md
+*negrito*
+_italico_
+headers # <h1>  ##<h2> ...
