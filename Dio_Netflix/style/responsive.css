@@ -1,0 +1,23 @@
+@media screen and (max-width:600px){
+    header .container{
+    display: flex;
+    flex-direction: column;
+    }
+
+    .botao{
+    margin-top: 5px;
+    width: 190px;
+    height: 50px;
+    }
+
+    .titulo{
+        margin-top: 5px;
+        font-size: 20px;
+        
+    }
+}
+
+
+
+    
+
