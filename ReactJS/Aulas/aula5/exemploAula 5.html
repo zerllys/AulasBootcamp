@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <title>Aula5 - exemplo </title>
+    <meta charset="utf-8" />
+
+</head>
+
+<body>
+
+    <input type="text" id="texto">
+    <button id="botao">salvar</button>
+    <ul id="lista"></ul> 
+    <button id="botaoDeletar">deletar</button>
+
+
+    <script>
+
+        const inputTexto = document.querySelector("#texto")
+        const botao = document.querySelector("#botao")
+        const lista = document.querySelector("#lista")
+        const botaoDeletar = document.querySelector("#botaoDeletar")
+
+//metodo
+        botao.addEventListener("mouseover", () => {
+
+            console.log(inputTexto.value)
+            localStorage.setItem("meu-texto", inputTexto.value)//chave e valor
+
+
+            lista.innerHTML = `
+            <li>
+            ${localStorage.getItem("meu-texto")}
+            </li>
+            
+            
+            `
+
+        })
+
+
+         //evento DomContent
+
+        window.addEventListener("DOMContentLoaded",() =>{
+
+            lista.innerHTML = `
+            <li>
+            ${localStorage.getItem("meu-texto")}
+            </li>
+            
+            `
+    
+})
+
+//deletar
+
+botaoDeletar.addEventListener("click",()=>{
+    localStorage.clear()
+    lista.innerHTML=null
+})
+
+       
+
+    </script>
+</body>
+
+</html>

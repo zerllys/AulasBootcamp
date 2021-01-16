@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Aula3-Fetch Gatos</title>
+    <!--push - adiciona
+        pop - remove
+        length - tamanho-->
+    <!--GET - obtem o site
+            Post - envia informações: cadastro/ clicar em algum botao-->
+    <!--status...
+                informaçao 100
+                sucesso 200
+                redirecionamento 300
+                erros do cliente 400
+                erros do servidor 500-->
+    <!--Json -->
+    <!--API interface que possibilita a integração de sistemas
+                Fetch meio de consumir a API, usa then e catch para tratar as respostas-->
+
+    <meta charset="utf-8" />
+</head>
+
+<body>
+    <button onclick="mudarImagem()">Foto de Gato</button><br>
+    <img src="" id="foto">
+
+    <script>
+
+        function mudarImagem() {
+            let foto = document.querySelector("#foto")
+            fetch("https://aws.random.cat/meow")
+                .then(function (resposta) {
+                    resposta.json()
+                    
+                        .then(function (dados) {
+                            foto.src = dados.file//innerText - para textos
+                            console.log(dados)
+                        })
+                })
+                .catch(function (error) {
+                    console.log(error)
+                })
+        }
+    </script>
+</body>
+
+</html>

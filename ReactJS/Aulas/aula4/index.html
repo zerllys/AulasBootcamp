@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Aula4- Classes</title>
+
+    <meta charset="utf-8" />
+</head>
+
+<body>
+
+
+    <script>
+        class Pessoa {
+            constructor(nome, idade) {
+                this.nome = nome
+                this.idade = idade
+                console.log(this)
+            }
+            
+            casar(){
+                if(this.idade>18){
+                    return "pode casar"
+                }else{
+                    return "nao pode casar"
+                }
+                
+            }
+        }
+
+const jennifer = new Pessoa(jennifer,20)
+console.log(jennifer)
+
+const luiz = new Pessoa("luiz",10)
+console.log(luiz.casar())
+
+        class Cachorro {
+            constructor(nomeDoCachorro) {
+                this.nome = nomeDoCachorro
+            }
+            latir() {
+                return "auau"
+            }
+        }
+        const bolinha = new Cachorro("bolinha")
+        console.log(bolinha.latir())
+
+//loop
+
+const animais = [b,a,c];
+animais.map(function(elemento){
+    alert(elemento)
+})
+
+    </script>
+</body>
+
+</html>

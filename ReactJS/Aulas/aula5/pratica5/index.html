@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <input type="text" id="texto">
+  <button id="botao">Botao</button>
+  <button id="deletar">deletar</button>
+
+  <ul id="lista"></ul>
+
+  <script>
+
+    const inputTexto = document.querySelector("#texto")
+    const botao = document.querySelector("#botao")
+    const lista = document.querySelector("#lista")
+    const botaoDeletar = document.querySelector("#deletar")
+
+    botao.addEventListener("click", () => {
+      localStorage.setItem("meu-texto", inputTexto.value)
+      lista.innerHTML = `
+        <li>
+          ${localStorage.getItem("meu-texto")}
+        </li>
+      `
+    })
+
+    window.addEventListener("DOMContentLoaded", () => {
+      lista.innerHTML = `
+        <li>
+          ${localStorage.getItem("meu-texto")}
+        </li>
+      `
+    })
+
+    botaoDeletar.addEventListener("click", () => {
+      localStorage.clear()
+      lista.innerHTML = null
+    })
+
+  </script>
+  
+</body>
+</html>
