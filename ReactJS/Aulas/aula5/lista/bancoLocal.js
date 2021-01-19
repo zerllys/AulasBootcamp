@@ -12,10 +12,10 @@ class BancoLocal {
     lista.push(item)
     localStorage.setItem("lista-de-compras", JSON.stringify(lista))
   }
-  
+
   apagar() {
-    let lista = this.minhaLista || [] 
+    let lista = this.minhaLista || []
     lista.remove(item)
-    localStorage.getItem("lista-de-compras",JSON.stringify(lista))
+    localStorage.clear()
   }
 }

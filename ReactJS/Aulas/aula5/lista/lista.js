@@ -7,21 +7,24 @@ class Lista {
   }
 
   apagarLista() {
-    // implementar apagar do html
+
+    this.lista.innerHTML = ''
   }
+
 
   adicionarNaLista(minhaLista) {
     let listaHTML = ''
-    minhaLista.inputItem.map(function(retorno){
+
+    minhaLista.map((conteudo) => {
 
       listaHTML += `
-      
+      <div class="listaHTML">
+        <li> ${conteudo}
+        </li>
+      </div>
       
       `
     })
-
-
-    // loop
 
     this.lista.innerHTML = listaHTML
   }

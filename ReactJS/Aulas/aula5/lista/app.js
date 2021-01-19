@@ -9,9 +9,8 @@ lista.botaoAdicionar.addEventListener("click", () => {
 })
 
 lista.botaoApagar.addEventListener("click", () => {
-  // 2 metodos para apagar
+  bancoLocal.apagar()
 
-  
 })
 
 window.addEventListener("DOMContentLoaded", () => {
